@@ -9,15 +9,15 @@
 
     
     <div class="container-fluid justify-content-end">
-        <a class=" fs-2 mx-1 links" href="{{route('ad.new')}}"><i class="fas fa-ad"></i></a>
+        <a class="fs-5 mx-3 links" href="{{route('ad.new')}}"><i class="fas fa-ad"></i></a>
         @guest
         <a type="button" class="btn btn-outline-light box-radius text-decoration-none mx-1" href="{{route('login')}}">Iniciar sesión</a>
         @endguest
         @auth
         <form action="{{route('logout')}}" method="POST">
-        @csrf
+            @csrf
+            <button type="submit" class="links bg-transparent border-0 box-radius mx-1 fs-5" href="#"><i class="fas fa-sign-out-alt"></i></button> 
         </form>
-        <a type="button" class="btn btn-outline-light box-radius mx-1" href="#">Desconectar</a> 
         @endauth
     </div>
 

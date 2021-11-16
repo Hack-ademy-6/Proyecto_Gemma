@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Road+Rage&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap);
 .links{
     color: white;
 }
@@ -8,6 +9,10 @@
 
 .titulos{
     font-family: 'Road Rage', cursive;
+}
+
+.txt-cuerpo{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .nav-box{

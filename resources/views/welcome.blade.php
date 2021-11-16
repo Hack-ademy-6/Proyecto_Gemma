@@ -5,9 +5,10 @@
     <div class="alert alert-success">{{session('ad.create.success')}}</div>
     
 @endif
-
-<h1 class="titulos text-center my-5 display-1">Bienvenidos a RÁPIDO.ES</h1>
-
+<div class="container-fluid my-5 py-2">
+    <h1 class="titulos text-center display-1 my-2">Bienvenidos a RÁPIDO.ES</h1>
+    <p class="text-center txt-cuerpo h4">¡La plataforma de compraventa más rápida! Flash no es nadie a nuestro lado</p>
+</div>
 
 
 

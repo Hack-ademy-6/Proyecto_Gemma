@@ -9,6 +9,10 @@
     font-family: 'Road Rage', cursive;
 }
 
+.txt-cuerpo{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
 .nav-box{
     height: 80px;
     position: fixed;
