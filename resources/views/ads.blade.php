@@ -5,14 +5,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 my-5 py-2">
-            <h1 class="titulos text-center display-1 my-2">Bienvenidos a RÁPIDO.ES</h1>
-            <p class="text-center txt-cuerpo h4">¡La plataforma de compraventa más rápida! <b>¡Flash no es nadie a nuestro lado!</b></p>
+            <h1 class="titulos text-center my-2">Anuncios por categoría: {{$category->name}}</h1>
         </div>
     </div>
 </div>
 
-<div class="container my-5 py-5">
-    <div class="row">
+<div class="container my-5">
+    <div class="row vh-100">
         @foreach ($ads as $ad)
         <div class="col-12 col-md-4 py-2">
             <div class="card h-100">
@@ -22,7 +21,7 @@
                     <h6 class="card-subtitle text-muted">{{$ad->price}}</h6>
                     <p class="card-text">{{$ad->body}}</p>
                     <h6 class="card-subtitle">
-                        <strong>Categoría: <a href="{{route('category.ads', ['name' => $ad->category->name, 'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
+                        <strong>Categoría: <a href="#">{{$ad->category->name}}</a></strong>
                         <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                     </h6>
                     <a href="#" class="btn btn-dark txt-cuerpo">VISUALIZAR</a>
@@ -33,21 +32,12 @@
         @endforeach
     </div>
 </div>
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="container-fluid my-2">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            {{$ads->links()}}
+        </div>
+    </div>
+</div>
 
 @endsection
