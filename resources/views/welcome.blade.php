@@ -23,7 +23,7 @@
                     <p class="card-text">{{$ad->body}}</p>
                     <h6 class="card-subtitle">
                         <strong>Categoría: <a href="#">{{$ad->category->name}}</a></strong>
-                        <i>{{$ad->created_at->format('d/m/Y')}}</i>
+                        <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                     </h6>
                     <a href="#" class="btn btn-dark txt-cuerpo">VISUALIZAR</a>
                 </div>

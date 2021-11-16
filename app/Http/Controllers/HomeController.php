@@ -6,6 +6,7 @@ use App\Models\Ad;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
         $a = new Ad();
         $a->title = $request->input('title');
         $a->body = $request->input('body');
+        $a->user_id = Auth::id();
         $a->category_id = $request->input('category');
         $a->price = $request->input('price');
         $a->save();
