@@ -11,7 +11,7 @@
     <div class="container-fluid justify-content-end">
         <a class="fs-5 mx-3 links" href="{{route('ad.new')}}"><i class="fas fa-ad"></i></a>
         @guest
-        <a type="button" class="btn btn-outline-light box-radius text-decoration-none mx-1" href="{{route('login')}}">Iniciar sesión</a>
+        <a type="button" class="mx-1 links fs-5" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
         @endguest
         @auth
         <form action="{{route('logout')}}" method="POST">
