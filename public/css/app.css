@@ -6,20 +6,13 @@
     color: rgb(194, 194, 194);
 }
 
-/*a {
-    color: #0d6efd;
-    text-decoration: underline;
-  }
-a:hover {
-    color: #0a58ca;
-  }*/
-
 .titulos{
     font-family: 'Road Rage', cursive;
 }
 
 .nav-box{
     height: 80px;
+    position: fixed;
 }
 
 .search-box{

@@ -17,6 +17,6 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])-> name('welcome');
 Route::get('/ad/new', [HomeController::class, 'newAd'])-> name('ad.new');
-Route::post('/ad/create', [HomeController::class, 'creareAd'])-> name('ad.create');
+Route::post('/ad/create', [HomeController::class, 'createAd'])-> name('ad.create');
 
 

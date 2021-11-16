@@ -1,11 +1,11 @@
 @extends('layouts.app')
-@section('contect')
+@section('content')
 
-<div class="container">
+<div class="container vh-100">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
+        <div class="col-md-8 my-5 py-5">
+            <div class="card" style="width: 100vh;">
+                <div class="card-header titulos h3">
                     Nuevo Anuncio
                 </div>
                 <div class="card-body">
@@ -18,7 +18,7 @@
                             <small id="emailHelp" class="form-text" style="color:red">{{$message}}</small> 
                         @enderror
                     </div>
-                    <div class="form-group">
+                    <div class="form-group my-3">
                         <label for="adBody">Anuncio</label>
                         <textarea class="form-control" name="body" id="adBody" cols="30" rows="10">{{old('body')}}</textarea>
                         @error('body')
@@ -26,7 +26,7 @@
                         @enderror
                     </div>
 
-                    <button type="button" class="btn btn-dark box-radius">Crear</button>
+                    <button type="button" class="btn btn-dark box-radius my-2">Crear</button>
                     </form>
                 </div>
             </div>

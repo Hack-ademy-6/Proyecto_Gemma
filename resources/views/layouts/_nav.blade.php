@@ -1,4 +1,4 @@
-<nav class="navbar shadow-lg nav-box navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+<nav class="navbar shadow-lg nav-box sticky-top navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
     <div class="container-fluid justify-content-start">
         <a class="navbar-brand titulos fs-2 fst-italic" href="{{route('welcome')}}">RÁPIDO</a>
         <form>
