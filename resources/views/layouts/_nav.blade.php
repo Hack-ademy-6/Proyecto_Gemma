@@ -9,7 +9,7 @@
 
     
     <div class="container-fluid justify-content-end">
-        <a class="fs-5 mx-3 links" href="{{route('ad.new')}}"><i class="fas fa-ad"></i></a>
+        <a class="fs-5 mx-3 links" href="{{route('ad.new')}}"><i class="fas fa-plus"></i></a>
         @guest
         <a type="button" class="mx-1 links fs-5" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
         @endguest

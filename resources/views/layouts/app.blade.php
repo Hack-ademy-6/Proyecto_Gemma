@@ -14,6 +14,11 @@
   </head>
   <body>
     @include('layouts._nav')
+   
+    @if (session('ad.create.success'))
+        <div class="alert alert-success">{{session('ad.create.success')}}</div>
+    @endif
+
     @yield('content')
 
    

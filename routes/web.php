@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PublicController;
 
 
 /*
@@ -15,7 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])-> name('welcome');
+Route::get('/', [PublicController::class, 'index'])-> name('welcome');
 Route::get('/ad/new', [HomeController::class, 'newAd'])-> name('ad.new');
 Route::post('/ad/create', [HomeController::class, 'createAd'])-> name('ad.create');
 
