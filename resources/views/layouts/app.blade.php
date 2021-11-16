@@ -22,6 +22,7 @@
     
 
     <script src="{{mix('js/app.js')}}"></script>
+    <script src="https://kit.fontawesome.com/9dd4195462.js" crossorigin="anonymous"></script>
    
   </body>
 </html>

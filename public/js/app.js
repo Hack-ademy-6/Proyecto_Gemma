@@ -5244,6 +5244,18 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 
 __webpack_require__(/*! @popperjs/core */ "./node_modules/@popperjs/core/lib/index.js");
 
+__webpack_require__(/*! ./main */ "./resources/js/main.js");
+
+/***/ }),
+
+/***/ "./resources/js/main.js":
+/*!******************************!*\
+  !*** ./resources/js/main.js ***!
+  \******************************/
+/***/ (() => {
+
+
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":

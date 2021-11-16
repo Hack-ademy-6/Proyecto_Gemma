@@ -1,3 +1,27 @@
+.links{
+    color: white;
+}
+.links:hover{
+    color: rgb(194, 194, 194);
+}
+
+.titulos{
+    font-family: 'Road Rage', cursive;
+}
+
+.nav-box{
+    height: 80px;
+}
+
 .search-box{
     width: 800px;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 10px;
+    border-color: transparent;
+    object-position: left;
 }
+
+.box-radius{
+    border-radius: 10px           !important;
+} 
