@@ -15,9 +15,21 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
+.letter-sep{
+    letter-spacing: 0.10em;
+}
+.letter-sep:hover{
+    letter-spacing: 0.30em;
+}
+
 .nav-box{
     height: 80px;
     position: fixed;
+}
+
+.bg-gris{
+    background: -prefix-linear-gradient(top, rgb(223, 223, 223), white);
+    background: linear-gradient(to bottom, rgb(223, 223, 223), white);
 }
 
 .search-box{

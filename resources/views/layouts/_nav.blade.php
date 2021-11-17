@@ -1,6 +1,6 @@
 <nav class="navbar shadow-lg nav-box sticky-top navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
     <div class="container-fluid justify-content-start">
-        <a class="navbar-brand titulos fs-2 fst-italic" href="{{route('welcome')}}">RÁPIDO</a>
+        <a class="navbar-brand titulos fs-2 fst-italic letter-sep" href="{{route('welcome')}}">RÁPIDO</a>
         <form>
             <input class="search-box" type="text" placeholder="Search" aria-label="Search">
         </form>   

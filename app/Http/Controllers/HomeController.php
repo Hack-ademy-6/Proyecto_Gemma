@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function __contruct()
+    public function __construct()
     {
-        $this -> middleware('auth');
+        $this->middleware('auth');
     
     }
 
@@ -29,5 +29,10 @@ class HomeController extends Controller
         $a->price = $request->input('price');
         $a->save();
         return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito');
+    }
+
+    public function details($id){
+        $ad = Ad::findOrFail($id);
+        return view('ad.details',['ad'=>$ad]);
     }
 }
