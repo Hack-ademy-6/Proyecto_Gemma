@@ -21,4 +21,9 @@ class PublicController extends Controller
         
         return view('ads', compact('category', 'ads'));
     }
+
+    public function details($id){
+        $ad = Ad::findOrFail($id);
+        return view('ad.details',['ad'=>$ad]);
+    }
 }

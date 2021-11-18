@@ -30,9 +30,4 @@ class HomeController extends Controller
         $a->save();
         return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito');
     }
-
-    public function details($id){
-        $ad = Ad::findOrFail($id);
-        return view('ad.details',['ad'=>$ad]);
-    }
 }
