@@ -18,8 +18,12 @@ use App\Http\Controllers\RevisorController;
 */
 
 Route::get('/', [PublicController::class, 'index'])-> name('welcome');
+
 Route::get('/ad/new', [HomeController::class, 'newAd'])-> name('ad.new');
 Route::post('/ad/create', [HomeController::class, 'createAd'])-> name('ad.create');
 Route::get('/category/{name}/{id}/ads', [PublicController::class, 'adsByCategory'])-> name('category.ads');
 Route::get('/ad/{id}', [PublicController::class, 'details'])-> name('ad.details');
+
 Route::get('/revisor', [RevisorController::class, 'index'])-> name('revisor.home');
+Route::post('/revisor/ad/{id}/accept', [RevisorController::class, 'accept'])-> name('revisor.ad.accept');
+Route::post('/revisor/ad/{id}/reject', [RevisorController::class, 'reject'])-> name('revisor.ad.reject');

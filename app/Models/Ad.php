@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use App\Models\Ad;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
@@ -15,5 +16,9 @@ class Ad extends Model
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    static public function ToBeRevisionedCount(){
+        return Ad::where('is_accepted',null)->count();
     }
 }
