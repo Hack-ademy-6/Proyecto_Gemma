@@ -30,4 +30,9 @@ class PublicController extends Controller
         $ad = Ad::findOrFail($id);
         return view('ad.details',['ad'=>$ad]);
     }
+
+    public function locale($locale){
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 }

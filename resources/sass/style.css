@@ -55,3 +55,12 @@
 .box-radius{
     border-radius: 10px           !important;
 } 
+
+.menu{
+    min-width: 3rem       !important;
+
+}
+
+.icon-band{
+    padding: 0.1rem 0.5rem     !important;
+}
