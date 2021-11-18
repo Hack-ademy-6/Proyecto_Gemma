@@ -9,6 +9,7 @@
 
     
     <div class="container-fluid justify-content-end">
+        @auth
         @if (Auth::user()->is_revisor)
         <a href="{{route('revisor.home')}}">
             <span class="badge box-radius bg-danger fs-6">
@@ -16,11 +17,12 @@
             </span>
         </a>
         @endif
-        <a class="fs-5 mx-3 links" href="{{route('ad.new')}}"><i class="fas fa-plus"></i></a>
+        @endauth 
+        <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> Nuevo</a>
         @guest
-        <a type="button" class="mx-1 links fs-5" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
+        <a type="button" class="mx-1 links fs-2" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
         @endguest
-        @auth
+        @auth 
         <form action="{{route('logout')}}" method="POST">
             @csrf
             <button type="submit" class="links bg-transparent border-0 box-radius mx-1 fs-5" href="#"><i class="fas fa-sign-out-alt"></i></button> 

@@ -10,7 +10,7 @@
             <h4 class="txt-cuerpo text-center">¿Qué te gustaría comprar?</h4>
         </div>
         @include('layouts._category')
-        <div class="col-12 my-5 py-4 d-flex justify-content-center">
+        <div class="col-12 my-4 py-4 d-flex justify-content-center">
             <i class="fas fa-angle-double-down mx-1 h2"></i>
             <i class="fas fa-angle-double-down mx-1 h2"></i>
             <i class="fas fa-angle-double-down mx-1 h2"></i>
@@ -18,7 +18,16 @@
     </div>
 </div>
 
-
+<div class="container py-3">
+    <div class="row h-100">
+        <div class="col-12 text-center">
+            <h3 class="py-3 txt-cuerpo display-6">¿Quieres ganar dinero fácilmente? <b>¡Añade tu propio anuncio!</b></h3>
+            <a type="button" href="{{route('ad.new')}}" style="width: 20rem" class="btn btn-success box-radius titulos">
+                <h4 class="fs-1">Pincha aquí o en Nuevo</h4>
+            </a>
+        </div>
+    </div>
+</div>
 
 <div class="container my-5">
     <div class="row">

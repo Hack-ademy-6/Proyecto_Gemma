@@ -7,6 +7,19 @@
     color: rgb(194, 194, 194);
 }
 
+.a2{
+    color: transparent;
+}
+
+.btn-cambio{
+    color: black;
+    border-color: transparent;
+}
+.btn-cambio:hover{
+    color: white;
+    background-color: #dc3545;
+}
+
 .titulos{
     font-family: 'Road Rage', cursive;
 }
