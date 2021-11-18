@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 
 
 /*
@@ -21,3 +22,4 @@ Route::get('/ad/new', [HomeController::class, 'newAd'])-> name('ad.new');
 Route::post('/ad/create', [HomeController::class, 'createAd'])-> name('ad.create');
 Route::get('/category/{name}/{id}/ads', [PublicController::class, 'adsByCategory'])-> name('category.ads');
 Route::get('/ad/{id}', [PublicController::class, 'details'])-> name('ad.details');
+Route::get('/revisor', [RevisorController::class, 'index'])-> name('revisor.home');

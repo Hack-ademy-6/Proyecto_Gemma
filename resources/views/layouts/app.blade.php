@@ -16,7 +16,11 @@
     @include('layouts._nav')
    
     @if (session('ad.create.success'))
-        <div class="alert alert-success">{{session('ad.create.success')}}</div>
+        <div class="alert alert-success mb-0">{{session('ad.create.success')}}</div>
+    @endif
+
+    @if (session('access.denied.revisor.only'))
+        <div class="alert alert-danger mb-0">{{session('access.denied.revisor.only')}}</div>
     @endif
 
     @yield('content')
