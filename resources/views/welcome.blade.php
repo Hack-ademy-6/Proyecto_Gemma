@@ -5,7 +5,7 @@
 <div class="container-fluid bg-gris">
     <div class="row">
         <div class="col-12 my-5 py-5">
-            <h1 class="titulos text-center display-1 my-2">Bienvenidos a <span class="text-danger">RÁPIDO.ES</span></h1>
+            <h1 class="titulos text-center display-1 my-2">{{__('ui.welcome')}} <span class="text-danger">RÁPIDO.ES</span></h1>
             <h2 class="text-center txt-cuerpo">¡La plataforma de compraventa más rápida! <b>¡Flash no es nadie a nuestro lado!</b></h2>
             <h4 class="txt-cuerpo text-center">¿Qué te gustaría comprar?</h4>
         </div>
@@ -23,7 +23,7 @@
         <div class="col-12 text-center">
             <h3 class="py-3 txt-cuerpo display-6">¿Quieres ganar dinero fácilmente? <b>¡Añade tu propio anuncio!</b></h3>
             <a type="button" href="{{route('ad.new')}}" style="width: 20rem" class="btn btn-success box-radius titulos">
-                <h4 class="fs-1">Pincha aquí o en Nuevo</h4>
+                <h4 class="fs-1">Pincha aquí o en <span class="mx-2"> <i class="fas fa-plus fs-3"></i></span></h4>
             </a>
         </div>
     </div>

@@ -16,7 +16,7 @@
         </a>
         @endif
         @endauth 
-        <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> Nuevo</a>
+        <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> Anuncio</a>
         @guest
         <a type="button" class="mx-1 links fs-2" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
         @endguest
@@ -26,7 +26,24 @@
             <button type="submit" class="links bg-transparent border-0 box-radius mx-1 fs-5" href="#"><i class="fas fa-sign-out-alt"></i></button> 
         </form>
         @endauth
-        @include('layouts.flags._locale', ["lang"=>'es', 'nation'=>'es'])
+        <ul class="navbar-nav">
+            <li class="nav-item mx-2 dropdown">
+                <a class="nav-link text-white fs-2 text-uppercase fw-bold" href="#" id="dropdown04"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-globe-americas"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark menu " aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item icon-band"
+                        href="#">@include('layouts.flags._locale',["lang"=>'en','nation'=>'gb'])</a></li>
+                    <li><a class="dropdown-item icon-band"
+                        href="#">@include('layouts.flags._locale',["lang"=>'it','nation'=>'it'])</a></li>
+                    <li><a class="dropdown-item icon-band"
+                        href="#">@include('layouts.flags._locale',["lang"=>'es','nation'=>'es'])</a></li>
+                </ul>
+            </li>
+        </ul>
+    </ul>
+        
     </div>
 
   </nav>
