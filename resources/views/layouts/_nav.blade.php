@@ -16,14 +16,14 @@
         </a>
         @endif
         @endauth 
-        <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> Anuncio</a>
+        <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> {{__('ui.nav+')}}</a>
         @guest
         <a type="button" class="mx-1 links fs-2" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
         @endguest
         @auth 
         <form action="{{route('logout')}}" method="POST">
             @csrf
-            <button type="submit" class="links bg-transparent border-0 box-radius mx-1 fs-5" href="#"><i class="fas fa-sign-out-alt"></i></button> 
+            <button type="submit" class="links bg-transparent border-0 box-radius mx-1 fs-4" href="#"><i class="fas fa-sign-out-alt"></i></button> 
         </form>
         @endauth
         <ul class="navbar-nav">

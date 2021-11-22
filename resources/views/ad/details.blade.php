@@ -3,7 +3,7 @@
 <div class="container mt-5 pt-1">
     <div class="row">
         <div class="col-12 titulos text-center">
-            <h1 class="display-5">Detalles del producto</h1>
+            <h1 class="display-5">{{__('ui.detalle')}}</h1>
         </div>
     </div>
 </div>
@@ -56,14 +56,14 @@
                 <p>{{$ad->body}}</p>
             </div>
             <div>
-                <h6 class="txt-cuerpo h4 pt-3">Precio: <b>{{$ad->price}}</b></h6>
+                <h6 class="txt-cuerpo h4 pt-3">{{__('ui.precios')}}: <b>{{$ad->price}}</b></h6>
                 <div>
-                    <strong>Categoría: <a href="#">{{$ad->category->name}}</a></strong>
+                    <strong>{{__('ui.categ')}}: <a href="#">{{$ad->category->name}}</a></strong>
                     <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-5 pt-3">
-                <button type="button" class="btn btn-success titulos fs-5 box-radius letter-sep">Comprar</button>
+                <button type="button" class="btn btn-success titulos fs-5 box-radius letter-sep">{{__('ui.comprar')}}</button>
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 my-5 py-2">
-            <h1 class="titulos text-center display-5 my-2">Anuncios por categoría: {{$category->name}}</h1>
+            <h1 class="titulos text-center display-5 my-2">{{__('ui.ads1')}} {{$category->name}}</h1>
         </div>
     </div>
 </div>
@@ -22,7 +22,7 @@
                         <h6 class="card-subtitle text-muted my-1">{{$ad->price}}</h6>
                     </div>
                     <h6 class="card-subtitle my-2">
-                        <strong>Categoría: <a href="#">{{$ad->category->name}}</a></strong>
+                        <strong>{{__('ui.categ')}}: <a href="#">{{$ad->category->name}}</a></strong>
                         <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                     </h6>
                     <div class="d-flex flex-column">

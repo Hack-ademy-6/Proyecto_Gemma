@@ -1,13 +1,15 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container vh-100">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 my-4 py-5">
-            <div class="card" style="width: 100vh;">
-                <div class="card-header titulos h4">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 100vh;">
+                <div class=" titulos h4">
                     Nuevo Anuncio
+                    <hr class="mb-0 pb-0">
                 </div>
+               
                 <div class="card-body">
                     <form method="POST" action="{{route('ad.create')}}">
                     @csrf

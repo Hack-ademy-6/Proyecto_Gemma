@@ -6,8 +6,8 @@
     <div class="row">
         <div class="col-12 my-5 py-5">
             <h1 class="titulos text-center display-1 my-2">{{__('ui.welcome')}} <span class="text-danger">RÁPIDO.ES</span></h1>
-            <h2 class="text-center txt-cuerpo">¡La plataforma de compraventa más rápida! <b>¡Flash no es nadie a nuestro lado!</b></h2>
-            <h4 class="txt-cuerpo text-center">¿Qué te gustaría comprar?</h4>
+            <h2 class="text-center txt-cuerpo">{{__('ui.sub')}} <b>{{__('ui.flash')}}</b></h2>
+            <h4 class="txt-cuerpo text-center">{{__('ui.sub3')}}</h4>
         </div>
         @include('layouts._category')
         <div class="col-12 my-4 py-4 d-flex justify-content-center">
@@ -21,9 +21,9 @@
 <div class="container py-3">
     <div class="row h-100">
         <div class="col-12 text-center">
-            <h3 class="py-3 txt-cuerpo display-6">¿Quieres ganar dinero fácilmente? <b>¡Añade tu propio anuncio!</b></h3>
+            <h3 class="py-3 txt-cuerpo display-6">{{__('ui.sub4')}}</h3>
             <a type="button" href="{{route('ad.new')}}" style="width: 20rem" class="btn btn-success box-radius titulos">
-                <h4 class="fs-1">Pincha aquí o en <span class="mx-2"> <i class="fas fa-plus fs-3"></i></span></h4>
+                <h4 class="fs-1">{{__('ui.pincha')}} <span class="mx-2"> <i class="fas fa-plus fs-3"></i></span></h4>
             </a>
         </div>
     </div>
@@ -41,7 +41,7 @@
                     <h6 class="card-subtitle my-1">
                         <strong>Categoría: <a href="{{route('category.ads', ['name' => $ad->category->name, 'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
                     </h6>
-                    <a href="{{route('ad.details', ['id'=>$ad->id])}}" class="btn btn-dark txt-cuerpo box-radius my-4">Más</a>
+                    <a href="{{route('ad.details', ['id'=>$ad->id])}}" class="btn btn-dark txt-cuerpo box-radius my-4">{{__('ui.mas')}}</a>
                 </div>
             </div>
         </div>
