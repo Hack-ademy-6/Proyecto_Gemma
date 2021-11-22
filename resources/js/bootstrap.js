@@ -29,6 +29,5 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 require ('bootstrap');
 require ('@popperjs/core');
-window.Swiper = require ('swiper/bundle');
 
 require ('./main');
