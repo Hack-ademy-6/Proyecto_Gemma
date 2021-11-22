@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 my-5 py-2">
-            <h1 class="titulos text-center my-2">Anuncios por categoría: {{$category->name}}</h1>
+            <h1 class="titulos text-center display-5 my-2">Anuncios por categoría: {{$category->name}}</h1>
         </div>
     </div>
 </div>
