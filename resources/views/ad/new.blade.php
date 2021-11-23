@@ -6,13 +6,14 @@
         <div class="col-md-8 my-4 py-5">
             <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 100vh;">
                 <div class=" titulos h4">
-                    Nuevo Anuncio
+                    Nuevo Anuncio (Secret: {{$uniqueSecret}})
                     <hr class="mb-0 pb-0">
                 </div>
                
                 <div class="card-body">
                     <form method="POST" action="{{route('ad.create')}}">
                     @csrf
+                    <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
                     <div class="form-group">
                         <label for="adName" class="my-2">Título</label>
                         <input type="text" class="form-control" id="adName" name="title" value="{{old('title')}}">
@@ -49,6 +50,14 @@
                         <textarea class="form-control" name="body" id="adBody" cols="30" rows="10">{{old('body')}}</textarea>
                         @error('body')
                             <small id="emailHelp" class="form-text" style="color:red">{{$message}}</small> 
+                        @enderror
+                    </div>
+
+                    <div class="my-3">
+                        <label for="adImages" class="form-label my-2">Imágenes</label>
+                        <div class="dropzone" id="drophere"></div>
+                        @error('images')
+                            <small class="alert alert-danger">{{$message}}</small> 
                         @enderror
                     </div>
 

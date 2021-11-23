@@ -16,8 +16,13 @@ class HomeController extends Controller
     
     }
 
+    public function uploadImages(Request $request){
+        dd($request->all());
+    }
+
     public function newAd(){
-        return view('ad.new');
+        $uniqueSecret = base_convert(sha1(uniqid(mt_rand())),16,36);
+        return view('ad.new', compact('uniqueSecret'));
     }
 
     public function createAd(AdRequest $request){
@@ -28,6 +33,8 @@ class HomeController extends Controller
         $a->category_id = $request->input('category');
         $a->price = $request->input('price');
         $a->save();
+        $uniqueSecret = $request->input('uniqueSecret');
+
         return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito');
     }
 }

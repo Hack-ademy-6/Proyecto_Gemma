@@ -30,4 +30,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 require ('bootstrap');
 require ('@popperjs/core');
 
+window.Dropzone = require('dropzone');
+Dropzone.autoDiscover = false;
+
+require ('./adImages');
 require ('./main');
