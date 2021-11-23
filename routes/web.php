@@ -23,6 +23,7 @@ Route::get('/ad/new', [HomeController::class, 'newAd'])-> name('ad.new');
 Route::post('/ad/create', [HomeController::class, 'createAd'])-> name('ad.create');
 Route::get('/category/{name}/{id}/ads', [PublicController::class, 'adsByCategory'])-> name('category.ads');
 Route::post('/ad/images/upload', [HomeController::class, 'uploadImages'])-> name('ad.images.upload');
+Route::delete('/ad/images/remove', [HomeController::class, 'removeImages'])-> name('ad.images.remove');
 Route::get('/ad/{id}', [PublicController::class, 'details'])-> name('ad.details');
 
 Route::get('/revisor', [RevisorController::class, 'index'])-> name('revisor.home');

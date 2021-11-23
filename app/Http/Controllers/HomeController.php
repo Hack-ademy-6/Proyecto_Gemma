@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
+use App\Models\AdImage;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -21,8 +24,19 @@ class HomeController extends Controller
         $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
         session()->push("images.{$uniqueSecret}", $fileName);
         return response()->json(
-            session()->get("images.{$uniqueSecret}")
+
+            [
+                'id' => $fileName
+            ]
         );
+    }
+
+    public function removeImages(Request $request){
+        $uniqueSecret = $request->input('uniqueSecret');
+        $fileName = $request->input('id');
+        session()->push("removedImages.{$uniqueSecret}", $fileName);
+        Storage::delete($fileName);
+        return response()->json('ok');
     }
 
     public function newAd(){
@@ -39,7 +53,20 @@ class HomeController extends Controller
         $a->price = $request->input('price');
         $a->save();
         $uniqueSecret = $request->input('uniqueSecret');
+        $images = session()->get("images.{$uniqueSecret}", []);
+        $removedImages = session()->get("removedImages.{$uniqueSecret}", []);
+        $images = array_diff($images, $removedImages);
 
-        return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito');
+        foreach ($images as $image) {
+            $i = new AdImage;
+            $fileName = basename($image);
+            $newFilePath = "public/ads/{$a->id}/{$fileName}";
+            Storage::move($image, $newFilePath);
+            $i->file = $newFilePath;
+            $i->ad_id = $a->id;
+            $i->save();
+        }
+        File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
+        return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito, se subirá en ser revisado');
     }
 }
