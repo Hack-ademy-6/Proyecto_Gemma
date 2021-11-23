@@ -19,7 +19,7 @@
                     <div class="carousel-inner">
                         @foreach ($ad->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="{{Storage::url($image->file)}}" class="d-block card-img-top" alt="...">
+                            <img src="{{$image->getUrl(300,150)}}" class="d-block card-img-top" alt="...">
                         </div>
                         @endforeach
                     </div>
