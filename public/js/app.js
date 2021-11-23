@@ -5211,7 +5211,7 @@ module.exports = {
   if (document.getElementById("drophere")) {
     var csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute('content');
     var uniqueSecret = document.querySelector("input[name='uniqueSecret']").getAttribute('value');
-    var myDropzone = new Dropzone("#drophere", {
+    var myDropzone = new Dropzone["default"]("#drophere", {
       url: '/ad/images/upload',
       params: {
         _token: csrfToken,
