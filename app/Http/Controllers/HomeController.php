@@ -39,8 +39,12 @@ class HomeController extends Controller
         return response()->json('ok');
     }
 
-    public function newAd(){
-        $uniqueSecret = base_convert(sha1(uniqid(mt_rand())),16,36);
+    public function newAd(Request $request){
+        $uniqueSecret = $request->old(
+            'uniqueSecret',
+            base_convert(sha1(uniqid(mt_rand())),16,36)
+        );
+        
         return view('ad.new', compact('uniqueSecret'));
     }
 
@@ -68,5 +72,22 @@ class HomeController extends Controller
         }
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
         return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito, se subirá en ser revisado');
+    }
+
+    public function getImages(Request $request){
+        $uniqueSecret = $request->input('uniqueSecret');
+        $images = session()->get("images.{$uniqueSecret}", []);
+        $removedImages = session()->get("removedImages.{$uniqueSecret}", []);
+        $images = array_diff($images, $removedImages);
+        $data = [];
+        foreach ($images as $image) {
+            $data[] = [
+                'id' => $image,
+                'name' => basename($image),
+                'src' => Storage::url($image),
+                'size' => Storage::size($image)
+            ];
+        }
+        return response()->json($data);
     }
 }

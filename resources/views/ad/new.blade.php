@@ -6,7 +6,7 @@
         <div class="col-md-8 my-4 py-5">
             <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 100vh;">
                 <div class=" titulos h4">
-                    Nuevo Anuncio <!--(Secret: {{$uniqueSecret}})-->
+                    Nuevo Anuncio (Secret: {{$uniqueSecret}})
                     <hr class="mb-0 pb-0">
                 </div>
                
