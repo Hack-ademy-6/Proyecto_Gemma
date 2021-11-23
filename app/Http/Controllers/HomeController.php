@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use App\Models\AdImage;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
@@ -21,12 +22,13 @@ class HomeController extends Controller
 
     public function uploadImages(Request $request){
         $uniqueSecret = $request->input('uniqueSecret');
-        $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
-        session()->push("images.{$uniqueSecret}", $fileName);
+        $filePath = $request->file('file')->store("public/temp/{$uniqueSecret}");
+        dispatch(new ResizeImage($filePath,120,120));
+        session()->push("images.{$uniqueSecret}", $filePath);
         return response()->json(
 
             [
-                'id' => $fileName
+                'id' => $filePath
             ]
         );
     }
@@ -66,6 +68,13 @@ class HomeController extends Controller
             $fileName = basename($image);
             $newFilePath = "public/ads/{$a->id}/{$fileName}";
             Storage::move($image, $newFilePath);
+
+            dispatch(new ResizeImage(
+                $newFilePath,
+                300,
+                150
+            ));
+
             $i->file = $newFilePath;
             $i->ad_id = $a->id;
             $i->save();
@@ -84,7 +93,7 @@ class HomeController extends Controller
             $data[] = [
                 'id' => $image,
                 'name' => basename($image),
-                'src' => Storage::url($image),
+                'src' => AdImage::getUrlByFilePath($image, 120, 120),
                 'size' => Storage::size($image)
             ];
         }
