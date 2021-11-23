@@ -38,14 +38,16 @@
                         </div>
                     </div>
                     <hr>
+                    @foreach ($ad->images as $image)
                     <div class="row">
                         <div class="col-md-3 txt-cuerpo">
                             <h4>Imagen</h4>
                         </div>
                         <div class="col-md-9">
-                              
+                            <img src="{{ Storage::url($image->file) }}" class="img-fluid" alt="">
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -67,7 +69,10 @@
 </div>
 
 @else
-<h3 class="text-center titulos my-5">¡Qué RÁPIDO! No hay más anuncios</h3>
-
+<div class="container contenedor">
+    <div class="row">
+        <h3 class="text-center titulos my-5">¡Qué RÁPIDO! No hay más anuncios</h3>
+    </div>
+</div>
 @endif
 @endsection

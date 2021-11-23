@@ -7,25 +7,17 @@
         </div>
     </div>
 </div>
-<div class="container pt-5">
+<div class="container py-5">
     <div class="row">
+      @foreach ($ad->images as $image)
         <div class="col-12 col-md-6">
         <div
       style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
       class="swiper mySwiper2 carrusel"
     >
       <div class="swiper-wrapper">
-        <div class="swiper-slide ">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </div>
-        <div class="swiper-slide ">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </div>
-        <div class="swiper-slide ">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </div>
-        <div class="swiper-slide ">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        <div class="swiper-slide @if($loop->first)active @endif">
+          <img src="{{Storage::url($image->file)}}" />
         </div>
       </div>
       <div class="swiper-button-next"></div>
@@ -33,23 +25,16 @@
     </div>
     <div thumbsSlider="" class="swiper mySwiper">
       <div class="swiper-wrapper mt-2">
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        
+        <div class="swiper-slide ">
+          <img src="{{Storage::url($image->file)}}" />
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </div>
+       
       </div>
     </div>
     
     </div>
-
+    @endforeach
         <div class="col-12 col-md-6">
             <div>
                 <h5 class="titulos h2">{{$ad->title}}</h5>

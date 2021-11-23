@@ -34,7 +34,24 @@
         @foreach ($ads as $ad)
         <div class="col-12 col-md-3 py-2 d-flex justify-content-center">
             <div class="card h-100" style="width: 15rem;">
-                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($ad->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="{{Storage::url($image->file)}}" class="d-block card-img-top" alt="...">
+                        </div>
+                        @endforeach
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                </div>
+        
                 <div class="card-body d-flex flex-column justify-content-around">
                     <h5 class="card-title txt-cuerpo h4 my-1">{{$ad->title}}</h5>
                     <h6 class="card-subtitle text-muted my-1">{{$ad->price}}</h6>

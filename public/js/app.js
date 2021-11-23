@@ -5211,7 +5211,7 @@ module.exports = {
   if (document.getElementById("drophere")) {
     var csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute('content');
     var uniqueSecret = document.querySelector("input[name='uniqueSecret']").getAttribute('value');
-    var myDropzone = new Dropzone["default"]("#drophere", {
+    var myDropzone = new window.Dropzone["default"]("#drophere", {
       url: '/ad/images/upload',
       params: {
         _token: csrfToken,
@@ -5222,7 +5222,7 @@ module.exports = {
         fetch("/ad/images?uniqueSecret=".concat(uniqueSecret), {
           method: 'GET'
         }).then(function (response) {
-          return response.jason();
+          return response.json();
         }).then(function (data) {
           data.forEach(function (image) {
             var file = {
@@ -5303,7 +5303,7 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 __webpack_require__(/*! @popperjs/core */ "./node_modules/@popperjs/core/lib/index.js");
 
 window.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/dist/dropzone.js");
-Dropzone.autoDiscover = false;
+window.Dropzone.autoDiscover = false;
 
 __webpack_require__(/*! ./adImages */ "./resources/js/adImages.js");
 

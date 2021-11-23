@@ -1,4 +1,4 @@
-<div class="container-fluid bg-dark" style="height: 300px">
+<div class="container-fluid bg-dark " style="height: 300px">
     <footer class="row justify-content-between align-items-center border-top">
       <div class="col-12 col-md-6 mt-3 d-flex flex-column align-items-center">
         <div class="text-center">

@@ -31,7 +31,7 @@ require ('bootstrap');
 require ('@popperjs/core');
 
 window.Dropzone = require('dropzone');
-Dropzone.autoDiscover = false;
+window.Dropzone.autoDiscover = false;
 
 require ('./adImages');
 require ('./main');
