@@ -25,9 +25,10 @@ Route::get('/category/{name}/{id}/ads', [PublicController::class, 'adsByCategory
 Route::post('/ad/images/upload', [HomeController::class, 'uploadImages'])-> name('ad.images.upload');
 Route::delete('/ad/images/remove', [HomeController::class, 'removeImages'])-> name('ad.images.remove');
 Route::get('/ad/images', [HomeController::class, 'getImages'])-> name('ad.images');
-Route::get('/ad/{id}', [PublicController::class, 'details'])-> name('ad.details');
-
 Route::get('/revisor', [RevisorController::class, 'index'])-> name('revisor.home');
+Route::get('/{ad}', [PublicController::class, 'details'])-> name('ad.details');
+
+
 Route::post('/revisor/ad/{id}/accept', [RevisorController::class, 'accept'])-> name('revisor.ad.accept');
 Route::post('/revisor/ad/{id}/reject', [RevisorController::class, 'reject'])-> name('revisor.ad.reject');
 

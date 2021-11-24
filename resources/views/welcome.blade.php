@@ -38,18 +38,10 @@
                     <div class="carousel-inner">
                         @foreach ($ad->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="{{$image->getUrl(300,150)}}" class="d-block card-img-top" alt="...">
+                            <img src="{{$image->getUrl(300,150)}}" class="d-block w-100 card-img-top" alt="...">
                         </div>
                         @endforeach
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
                 </div>
         
                 <div class="card-body d-flex flex-column justify-content-around">
@@ -58,7 +50,7 @@
                     <h6 class="card-subtitle my-1">
                         <strong>Categoría: <a href="{{route('category.ads', ['name' => $ad->category->name, 'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
                     </h6>
-                    <a href="{{route('ad.details', ['id'=>$ad->id])}}" class="btn btn-dark txt-cuerpo box-radius my-4">{{__("Más")}}</a>
+                    <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-dark txt-cuerpo box-radius my-4">{{__("Más")}}</a>
                 </div>
             </div>
         </div>

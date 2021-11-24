@@ -6,7 +6,7 @@
         <div class="col-12">
             <div class="card d-flex justify-content-center">
                 <div class="card-header txt-cuerpo fw-bold">
-                    Anuncio #{{$ad->id}}
+                    Anuncio #{{$ad->slug}}
                 </div>
                 <div class="card-body">
                     <div class="row">

@@ -27,4 +27,9 @@ class Ad extends Model
 
         return $this->HasMany(AdImage::class);
     }
+
+    public function getRouteKeyName(){
+
+        return 'slug';
+    }
 }

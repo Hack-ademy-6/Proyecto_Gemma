@@ -50,6 +50,7 @@
     border-radius: 10px;
     border-color: transparent;
     object-position: left;
+    position: relative;
 }
 
 .box-radius{
@@ -64,8 +65,6 @@
 .icon-band{
     padding: 0.1rem 0.5rem     !important;
 }
-
-
 
 .swiper {
     width: 100%;
@@ -149,5 +148,10 @@
   }
 
   .contenedor{
-    height: 15cm;
+    min-height: 15cm;
+    
   }
+
+
+
+  

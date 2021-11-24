@@ -3,8 +3,8 @@
       <div class="col-12 col-md-6 mt-3 d-flex flex-column align-items-center">
         <div class="text-center">
             <h5 class="titulos text-center fs-4 text-white">{{__("RECIBE LAS NOVEDADES")}}</h5>
-            <form class="py-2 mb-2">
-                <input class="form-control box-radius" style="width: 500px" type="email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <form class="py-2 mb-3">
+              <input type="email" class="form-control box-radius" id="exampleInputEmail1" aria-describedby="emailHelp">
             </form>
             <button type="button" style="width: 100px" class="btn btn-success box-radius titulos letter-sep">{{__("ENVIAR")}}</button>   
         </div>

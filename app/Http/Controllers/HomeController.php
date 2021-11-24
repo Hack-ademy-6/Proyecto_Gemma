@@ -6,6 +6,7 @@ use App\Models\Ad;
 use App\Models\AdImage;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
@@ -53,6 +54,7 @@ class HomeController extends Controller
     public function createAd(AdRequest $request){
         $a = new Ad();
         $a->title = $request->input('title');
+        $a->slug = Str::of($a->title)->slug('-');
         $a->body = $request->input('body');
         $a->user_id = Auth::id();
         $a->category_id = $request->input('category');
@@ -99,4 +101,6 @@ class HomeController extends Controller
         }
         return response()->json($data);
     }
+
+    
 }
