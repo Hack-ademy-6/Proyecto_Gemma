@@ -16,7 +16,7 @@
         </a>
         @endif
         @endauth 
-        <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> {{__('ui.nav+')}}</a>
+        <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> {{__("Anuncio")}}</a>
         @guest
         <a type="button" class="mx-1 links fs-2" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
         @endguest

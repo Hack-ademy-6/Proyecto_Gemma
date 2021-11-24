@@ -8,8 +8,6 @@
     
     <title>{{ config('app.name', 'Rapido')}}</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
 
     
@@ -31,7 +29,6 @@
 
     @include('layouts._footer')
     
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="{{mix('js/app.js')}}"></script>
     <script src="https://kit.fontawesome.com/9dd4195462.js" crossorigin="anonymous"></script>
    

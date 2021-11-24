@@ -4,17 +4,17 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 my-5 py-2">
+        <div class="col-12 my-5 pt-2">
             <h1 class="titulos text-center display-5 my-2">{{__('ui.ads1')}} {{$category->name}}</h1>
         </div>
     </div>
 </div>
 
-<div class="container my-2">
+<div class="container">
     <div class="row">
         @foreach ($ads as $ad)
         <div class="col-12 col-md-4 py-2 d-flex justify-content-center">
-            <div class="card">
+            <div class="card h-100" style="width: 30rem;"">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($ad->images as $image)
@@ -38,11 +38,11 @@
                         <h6 class="card-subtitle text-muted my-1">{{$ad->price}}</h6>
                     </div>
                     <h6 class="card-subtitle my-2">
-                        <strong>{{__('ui.categ')}}: <a href="#">{{$ad->category->name}}</a></strong>
+                        <strong>{{__("Anuncios por categoría:")}}: <a href="#">{{$ad->category->name}}</a></strong>
                         <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                     </h6>
                     <div class="d-flex flex-column">
-                        <a href="#" class="btn btn-dark txt-cuerpo box-radius my-2">LEER</a>
+                        <a href="{{route('ad.details', ['id'=>$ad->id])}}" class="btn btn-dark txt-cuerpo box-radius my-2">LEER</a>
                     </div>
                 </div>
             </div>

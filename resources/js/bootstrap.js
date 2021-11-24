@@ -33,6 +33,7 @@ require ('@popperjs/core');
 window.Dropzone = require('dropzone');
 Dropzone.autoDiscover = false;
 
+window.Swiper = require('swiper/bundle');
 
 require ('./adImages');
 require ('./main');

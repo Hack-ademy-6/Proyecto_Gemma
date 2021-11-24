@@ -1,11 +1,11 @@
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper.default(".mySwiper", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
   });
-  var swiper2 = new Swiper(".mySwiper2", {
+  var swiper2 = new Swiper.default(".mySwiper2", {
     loop: true,
     spaceBetween: 10,
     navigation: {
