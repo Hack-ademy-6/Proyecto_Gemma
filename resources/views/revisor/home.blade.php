@@ -38,16 +38,29 @@
                         </div>
                     </div>
                     <hr>
-                    @foreach ($ad->images as $image)
+                    
                     <div class="row">
-                        <div class="col-md-3 txt-cuerpo">
+                        <div class="md-2 txt-cuerpo">
                             <h4>Imagen</h4>
                         </div>
-                        <div class="col-md-9">
+                        @foreach ($ad->images as $image)
+                        <div class="col-md-4">
                             <img src="{{$image->getUrl(300,150)}}" class="img-fluid" alt="">
                         </div>
+                        <div class="col-md-8">
+                            Adult : {{$image->adult}} <br>
+                            Spoof : {{$image->spoof}} <br>
+                            Medical : {{$image->medical}} <br>
+                            Violence : {{$image->violence}} <br>
+                            Racy : {{$image->racy}} <br>
+                            
+                            {{$image->id}} <br>
+                            {{$image->file}} <br>
+                            {{Storage:: url($image->file)}} <br>
+                        </div>
+                        @endforeach
                     </div>
-                    @endforeach
+                    
                 </div>
             </div>
         </div>
