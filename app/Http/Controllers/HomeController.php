@@ -9,8 +9,10 @@ use App\Jobs\ResizeImage;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdRequest;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use App\Jobs\GoogleVisionRemoveFaces;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\GoogleVisionSafeLabelImage;
 use App\Jobs\GoogleVisionSafeSearchImage;
@@ -85,8 +87,17 @@ class HomeController extends Controller
             dispatch(new GoogleVisionSafeSearchImage($i->id));
             dispatch(new GoogleVisionSafeLabelImage($i->id));
         }
+        
+        Bus::chain([
+            new GoogleVisionSafeSearchImage($i->id),
+            new GoogleVisionSafeLabelImage($i->id),
+            new GoogleVisionRemoveFaces($i->id),
+            new ResizeImage($i->file, 300,150)
+        ])->dispatch();
+        
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
         return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito, se subirá en ser revisado');
+
     }
 
     public function getImages(Request $request){
