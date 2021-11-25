@@ -11,6 +11,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class AdImage extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'labels'=>'array'
+    ];
 
     public function ad(){
 

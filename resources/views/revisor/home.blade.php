@@ -53,10 +53,16 @@
                             Medical : {{$image->medical}} <br>
                             Violence : {{$image->violence}} <br>
                             Racy : {{$image->racy}} <br>
+                            <b>Labels</b>
+                            <ul>
+                                @if ($image->labels)
+                                @foreach ($image->labels as $label)
+                                <li>{{$label}}</li>
+                                @endforeach  
+                                @endif
+                            </ul>
                             
-                            {{$image->id}} <br>
-                            {{$image->file}} <br>
-                            {{Storage:: url($image->file)}} <br>
+                            
                         </div>
                         @endforeach
                     </div>

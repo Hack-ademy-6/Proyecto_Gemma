@@ -1,5 +1,5 @@
 
-<div class="col-12 d-flex justify-content-center h-100">
+<div class="col-12 d-flex justify-content-center">
     @foreach ($categories as $category)
     <a type="button" class="btn btn-cambio btn-transparent mx-3 box-radius letter-sep"  href="{{route('category.ads', ['name'=>$category->name, 'id'=>$category->id])}}">
         <div class="btn-cambio">

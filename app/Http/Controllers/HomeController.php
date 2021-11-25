@@ -12,6 +12,7 @@ use App\Http\Requests\AdRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\GoogleVisionSafeLabelImage;
 use App\Jobs\GoogleVisionSafeSearchImage;
 
 class HomeController extends Controller
@@ -82,6 +83,7 @@ class HomeController extends Controller
             $i->ad_id = $a->id;
             $i->save();
             dispatch(new GoogleVisionSafeSearchImage($i->id));
+            dispatch(new GoogleVisionSafeLabelImage($i->id));
         }
         File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
         return redirect()->route('welcome')->with('ad.create.success','Anuncio creado con éxito, se subirá en ser revisado');

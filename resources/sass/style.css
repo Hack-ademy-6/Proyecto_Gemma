@@ -44,7 +44,7 @@
 }
 
 .search-box{
-    width: 800px;
+    width: 500px;
     padding: 4px;
     margin: 5px;
     border-radius: 10px;
@@ -152,6 +152,12 @@
     
   }
 
+@media (min-width: 576px){
 
+  .search-box{
+    min-width: 50px;
+  }
+  
+}
 
   

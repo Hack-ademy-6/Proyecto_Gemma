@@ -31,9 +31,12 @@
 
 <div class="container my-5">
     <div class="row">
+        
+        <h2 class="titulos display-6 text-center py-3">¡Últimos anuncios!</h2>
+        
         @foreach ($ads as $ad)
         <div class="col-12 col-md-3 py-2 d-flex justify-content-center">
-            <div class="card h-100" style="width: 15rem;">
+            <div class="card bg-dark shadow border-0 text-white h-100" style="width: 20rem;">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($ad->images as $image)
@@ -48,9 +51,9 @@
                     <h5 class="card-title txt-cuerpo h4 my-1">{{$ad->title}}</h5>
                     <h6 class="card-subtitle text-muted my-1">{{$ad->price}}</h6>
                     <h6 class="card-subtitle my-1">
-                        <strong>Categoría: <a href="{{route('category.ads', ['name' => $ad->category->name, 'id'=>$ad->category->id])}}">{{$ad->category->name}}</a></strong>
+                        <strong>Categoría: <a href="{{route('category.ads', ['name' => $ad->category->name, 'id'=>$ad->category->id])}}" class="links">{{$ad->category->name}}</a></strong>
                     </h6>
-                    <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-dark txt-cuerpo box-radius my-4">{{__("Más")}}</a>
+                    <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-danger mb-0 txt-cuerpo  box-radius my-4">{{__("Más")}}</a>
                 </div>
             </div>
         </div>
