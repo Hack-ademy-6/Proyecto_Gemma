@@ -28,7 +28,7 @@
     <div thumbsSlider="" class="swiper mySwiper">
       <div class="swiper-wrapper mt-2">
         @foreach ($ad->images as $image)
-        <div class="swiper-slide ">
+        <div class="swiper-slide @if($loop->first)active @endif">
           <img src="{{Storage::url($image->file)}}" />
         </div>
         @endforeach
