@@ -5,7 +5,7 @@
 <div class="container-fluid bg-gris">
     <div class="row">
         <div class="col-12 my-5 py-5">
-            <h1 class="titulos text-center display-1 my-2">{{__("Bienvenidos a")}} <span class="text-danger">RÁPIDO.ES</span></h1>
+            <h1 class="titulos text-center display-1 my-2">{{__("Bienvenidos a")}} <span class="text-danger">RÁPIDO.ES xD</span></h1>
             <h2 class="text-center txt-cuerpo">{{__("¡La plataforma de compraventa más rápida!")}} <b>{{__("¡Flash no es nadie a nuestro lado!")}}</b></h2>
             <h4 class="txt-cuerpo text-center">{{__("¿Qué te gustaría comprar?")}}</h4>
         </div>
