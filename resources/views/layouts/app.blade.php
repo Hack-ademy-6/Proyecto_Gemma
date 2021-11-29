@@ -25,7 +25,7 @@
 
     @yield('content')
 
-   
+    @include('layouts._modal')
 
     @include('layouts._footer')
     

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="titulos display-5 py-5">Resultados de la búsqueda: {{$q}}</h2>
+                <h2 class="titulos display-5 py-5">{{__("Resultados de la búsqueda")}}: {{$q}}</h2>
             </div>
             @foreach ($ads as $ad)
             <div class="col-12 col-md-3 py-2 pb-5 d-flex align-items-center">

@@ -12,7 +12,7 @@
   
       <div class="col-12 col-md-3 d-flex flex-column align-items-center">
         <ul class="nav col flex-column align-items-center text-center pt-3">
-            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("Inicio")}}</a></li>
+            <li class="nav-item mb-2 "><a href="{{route('welcome')}}" class="nav-link p-0 text-muted txt-cuerpo">{{__("Inicio")}}</a></li>
             <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("Categorías")}}</a></li>
             <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("Precios")}}</a></li>
         </ul>
@@ -21,7 +21,7 @@
         <ul class="nav col flex-column align-items-center text-center pt-3"> 
             <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("Preguntas")}}</a></li>
             <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("¿Quiénes somos?")}}</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("Contáctanos")}}</a></li>
+            <li class="nav-item mb-2"><button type="button" class="nav-link bg-transparent border-0 p-0 text-muted txt-cuerpo" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__("Contáctanos")}}</button></li>
         </ul>
       </div>     
         

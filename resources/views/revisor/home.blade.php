@@ -6,12 +6,12 @@
         <div class="col-12">
             <div class="card d-flex justify-content-center">
                 <div class="card-header txt-cuerpo fw-bold">
-                    Anuncio #{{$ad->slug}}
+                    {{__("Anuncio")}} #{{$ad->slug}}
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3 txt-cuerpo">
-                            <h4>Usuario</h4>
+                            <h4>{{__("Usuario")}}</h4>
                         </div>
                         <div class="col-md-9">
                             #{{$ad->user->id}}
@@ -22,7 +22,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-md-3 txt-cuerpo">
-                            <h4>Título</h4>
+                            <h4>{{__("Título")}}</h4>
                         </div>
                         <div class="col-md-9">
                             {{$ad->title}}
@@ -31,7 +31,7 @@
                     <hr>
                     <div class="row">
                         <div class="col-md-3 txt-cuerpo">
-                            <h4>Descripción</h4>
+                            <h4>{{__("Descripción")}}</h4>
                         </div>
                         <div class="col-md-9">
                               {{$ad->body}}
@@ -41,19 +41,19 @@
                     
                     <div class="row">
                         <div class="md-2 txt-cuerpo">
-                            <h4>Imagen</h4>
+                            <h4>{{__("Imagen")}}</h4>
                         </div>
                         @foreach ($ad->images as $image)
                         <div class="col-md-4">
                             <img src="{{$image->getUrl(300,150)}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-md-8">
-                            Adult : {{$image->adult}} <br>
-                            Spoof : {{$image->spoof}} <br>
-                            Medical : {{$image->medical}} <br>
-                            Violence : {{$image->violence}} <br>
-                            Racy : {{$image->racy}} <br>
-                            <b>Labels</b>
+                            {{__("Adulto")}} : {{$image->adult}} <br>
+                            {{__("Falsificación")}} : {{$image->spoof}} <br>
+                            {{__("Médico")}} : {{$image->medical}} <br>
+                            {{__("Violencia")}} : {{$image->violence}} <br>
+                            {{__("Racismo")}} : {{$image->racy}} <br>
+                            <b>{{__("Etiquetas")}}</b>
                             <ul>
                                 @if ($image->labels)
                                 @foreach ($image->labels as $label)
@@ -75,13 +75,13 @@
         <div class="col-md-6 d-flex justify-content-center">
             <form action="{{route('revisor.ad.reject', ['id'=>$ad->id])}}" method="POST">
             @csrf
-                <button type="submit" class="btn btn-danger box-radius fs-5 letter-sep">RECHAZAR</button>
+                <button type="submit" class="btn btn-danger box-radius fs-5 letter-sep">{{__("RECHAZAR")}}</button>
             </form>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
             <form action="{{route('revisor.ad.accept', ['id'=>$ad->id])}}" method="POST">
             @csrf
-                <button type="submit" class="btn btn-success box-radius fs-5 letter-sep">ACEPTAR</button>
+                <button type="submit" class="btn btn-success box-radius fs-5 letter-sep">{{__("ACEPTAR")}}</button>
             </form>
         </div>
     </div>
@@ -90,7 +90,7 @@
 @else
 <div class="container contenedor">
     <div class="row">
-        <h3 class="text-center titulos my-5">¡Qué RÁPIDO! No hay más anuncios</h3>
+        <h3 class="text-center titulos my-5">{{__("¡Qué RÁPIDO! No hay más anuncios")}}</h3>
     </div>
 </div>
 @endif

@@ -1,6 +1,7 @@
 {
     
     "Anuncio": "Ad",
+    "Buscar": "Search",
 
     
     "Motos": "Motorcycles",
@@ -21,11 +22,28 @@
     "¿Quieres ganar dinero fácilmente? ¡Añade tu propio anuncio!": "Do you want to earn money easily? Add your own ad!",
     "Pincha aquí o en": "Click here or at",
     "Más": "More",
+    "¡SEGURIDAD!":  "SAFETY!",
+    "Nos importa que os sintáis seguros y así conseguir vuestra confianza, porque vosotros sois lo que importa.":  "We care that you feel safe and thus gain your trust, because you are what matters.",
+    "¡COMUNICACIÓN!": "COMMUNICATION!",
+    "Si tienes alguna duda, NOSOTRO TE LA RESOLVEREMOS, contáctanos cuando sea necesario, siempre estamos preparados.":  "If you have any doubts, WE WILL RESOLVE THEM, contact us whenever necessary, we are always ready.",
+    "¡NOSOTROS VAMOS!": "WE GO!",
+    "Siempre que compres algún producto, te aseguramos que haremos para que llegue a tu domicilio a la velocidad de un rayo.":  "Whenever you buy any product, we assure you that we will make sure that it arrives at your address at lightning speed.",
+    "¡Ha llegado el momento!":  "The time has come!",
+    "Busca los productos que deseas en las categorías, quién sabe... quizás encuentres lo que buscas...": "Look for the products you want in the categories, who knows... maybe you will find what you are looking for...",
+    "Si lo que quieres es vender, NADIE TE LO IMPIDE, sube un anuncio en": "If what you want is to sell, NOBODY IS HINDERING YOU, upload an ad in",
+    "¡Los productos más recientes!":  "The latest products!",
 
     "Anuncios por categoría:": "Ads by category:",
+    "LEER": "READ",
 
     "Detalles del producto": "Product details",
-    "Comprar": "Buy",
+    "INFORMACIÓN DEL VENDEDOR": "SELLER'S INFORMATION",
+    "NOMBRE": "NAME",
+    "EMAIL": "EMAIL",
+    "COMPRAR": "BUY",
+    "VOLVER": "BACK",
+
+    "Resultados de la búsqueda": "Search results", 
 
     
     "RECIBE LAS NOVEDADES": "GET THE LATEST NEWS",
@@ -35,5 +53,25 @@
     "Precios": "Price",
     "Preguntas": "Questions",
     "¿Quiénes somos?": "Who we are?",
-    "Contáctanos": "Contact us"
+    "Contáctanos": "Contact us",
+    "CERRAR": "CLOSE",
+    "TELÉFONO": "TELEPHONE",
+
+    "Usuario": "User",
+    "Título": "Title",
+    "Descripción": "Description",
+    "Imagen": "Image",
+    "Adulto": "Adult",
+    "Falsificación": "Spoof",
+    "Médico": "Medical",
+    "Violencia": "Violence",
+    "Racismo": "Racism",
+    "Etiquetas": "Labels",
+    "RECHAZAR": "REJECT",
+    "ACEPTAR": "ACCEPT",
+    "¡Qué RÁPIDO! No hay más anuncios": "How FAST! No more ads",
+
+    "Crear": "Create",
+    "Imágenes": "Images",
+    "Nuevo": "New"
 }

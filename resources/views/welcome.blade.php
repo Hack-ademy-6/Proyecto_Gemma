@@ -41,7 +41,7 @@
                 stroke="47"
                 style="width:150px;height:150px">
             </lord-icon>
-            <h5 class="txt-cuerpo"><b class="text-danger">¡SEGURIDAD!</b> Nos importa que os sintáis seguros y así conseguir vuestra confianza, porque vosotros sois lo que importa.</h5>
+            <h5 class="txt-cuerpo"><b class="text-danger">{{__("¡SEGURIDAD!")}}</b> {{__("Nos importa que os sintáis seguros y así conseguir vuestra confianza, porque vosotros sois lo que importa.")}}</h5>
         </div>
         <div class="col-12 col-md-4">
             <lord-icon
@@ -50,7 +50,7 @@
                 colors="primary:#000000,secondary:#911710"
                 style="width:150px;height:150px">
             </lord-icon>
-            <h5 class="txt-cuerpo"><b class="text-danger">¡COMUNICACIÓN!</b> Si tienes alguna duda, NOSOTRO TE LA RESOLVEREMOS, contáctanos cuando sea necesario, siempre estamos preparados.</h5>
+            <h5 class="txt-cuerpo"><b class="text-danger">{{__("¡COMUNICACIÓN!")}}</b> {{__("Si tienes alguna duda, NOSOTRO TE LA RESOLVEREMOS, contáctanos cuando sea necesario, siempre estamos preparados.")}}</h5>
         </div>
         <div class="col-12 col-md-4">
             <lord-icon
@@ -59,7 +59,7 @@
                 colors="primary:#000000,secondary:#911710"
                 style="width:150px;height:150px">
             </lord-icon>
-            <h5 class="txt-cuerpo"><b class="text-danger">¡NOSOTROS VAMOS!</b> Siempre que compres algún producto, te aseguramos que haremos para que llegue a tu domicilio a la velocidad de un rayo.</h5>
+            <h5 class="txt-cuerpo"><b class="text-danger">{{__("¡NOSOTROS VAMOS!")}}</b> {{__("Siempre que compres algún producto, te aseguramos que haremos para que llegue a tu domicilio a la velocidad de un rayo.")}}</h5>
         </div>
     </div>
 
@@ -76,9 +76,9 @@
             </lord-icon>
         </div>
         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-            <h3 class="titulos display-6">¡Ha llegado el momento!</h3>
-            <h5 class="txt-cuerpo">Busca los productos que deseas en las categorías, quién sabe... quizás encuentres lo que buscas...
-            Si lo que quieres es vender, NADIE TE LO IMPIDE, sube un anuncio en 
+            <h3 class="titulos display-6">{{__("¡Ha llegado el momento!")}}</h3>
+            <h5 class="txt-cuerpo">{{__("Busca los productos que deseas en las categorías, quién sabe... quizás encuentres lo que buscas...")}}
+            {{__("Si lo que quieres es vender, NADIE TE LO IMPIDE, sube un anuncio en")}} 
             </h5>
             <div class="d-flex justify-content-center">
                 <a class="fs-5 my-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> {{__("Anuncio")}}</a>
@@ -90,7 +90,7 @@
 <div class="container my-5">
     <div class="row">
         
-        <h2 class="titulos display-5 text-center py-3">¡Los productos más recientes!</h2>
+        <h2 class="titulos display-5 text-center py-3">{{__("¡Los productos más recientes!")}}</h2>
         
         @foreach ($ads as $ad)
         <div class="col-12 col-md-3 py-2 d-flex justify-content-center">
@@ -109,7 +109,7 @@
                     <h5 class="card-title txt-cuerpo h4 my-1">{{$ad->title}}</h5>
                     <h6 class="card-subtitle text-muted my-1">{{$ad->price}}</h6>
                     <h6 class="card-subtitle my-1">
-                        <strong>Categoría: <a href="{{route('category.ads', ['name' => $ad->category->name, 'id'=>$ad->category->id])}}" class="links">{{$ad->category->name}}</a></strong>
+                        <strong>{{__("Categorías")}}: <a href="{{route('category.ads', ['name' => $ad->category->name, 'id'=>$ad->category->id])}}" class="links">{{$ad->category->name}}</a></strong>
                     </h6>
                     <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-danger mb-0 txt-cuerpo  box-radius my-4">{{__("Más")}}</a>
                 </div>

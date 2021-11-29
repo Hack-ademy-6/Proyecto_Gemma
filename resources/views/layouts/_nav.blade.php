@@ -9,7 +9,7 @@
         </button> 
         <div class="collapse navbar-collapse justify-content-between">
             <form action="{{route('search')}}" method="GET" class="d-flex">
-                <input class="form-control box-radius me-2" type="text" name="q" placeholder="Buscar" aria-label="Search">
+                <input class="form-control box-radius me-2" type="text" name="q" placeholder={{__("Buscar")}} aria-label="Search">
                 <button class="btn btn-outline-danger box-radius" type="submit"><i class="fas fa-search"></i></button>
             </form>
             <div class="navbar-nav mb-sm-0 d-flex align-items-center">

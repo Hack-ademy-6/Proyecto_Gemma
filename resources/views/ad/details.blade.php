@@ -7,7 +7,7 @@
         </div>
     </div>
 </div>
-<div class="container py-5">
+<div class="container borde1 pt-5">
     <div class="row">
       
         <div class="col-12 col-md-6">
@@ -43,18 +43,58 @@
                 <p>{{$ad->body}}</p>
             </div>
             <div>
-                <h6 class="txt-cuerpo h4 pt-3">{{__("Precios")}}: <b>{{$ad->price}}</b></h6>
                 <div>
                     <strong>{{__("Categorías")}}: <a href="#">{{$ad->category->name}}</a></strong>
-                    <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                 </div>
-            </div>
-            <div class="d-flex justify-content-center mt-5 pt-3">
-                <button type="button" class="btn btn-success titulos fs-5 box-radius letter-sep">{{__("Comprar")}}</button>
+                <h5 class="txt-cuerpo h4 pt-3">{{__("Precios")}}: <b>{{$ad->price}}</b></h5>
+                
             </div>
         </div>
     </div>
 </div>
+<div class="container my-4 pb-5">
+  <div class="row">
+    <div class="col-12 col-md-6 d-flex">
+      <lord-icon
+        src="https://cdn.lordicon.com/dxjqoygy.json"
+        trigger="loop-on-hover"
+        colors="primary:#000000,secondary:#911710"
+        style="width:150px;height:150px">
+      </lord-icon>
+      <div class="card shadow " style="width: 30rem;">
+        <div class="card-body ">
+          <h4 class="card-title titulos">{{__("INFORMACIÓN DEL VENDEDOR")}}</h4>
+          <h6 class="txt-cuerpo">{{__("NOMBRE")}}: {{$ad->user->name}}</h6>
+          <h6 class="txt-cuerpo">{{$ad->user->lastname}}</h6>
+          <h6 class="txt-cuerpo">{{__("EMAIL")}}: {{$ad->user->email}}</h6>
+          <h6 class="txt-cuerpo">{{$ad->created_at->format('d/m/Y')}}</h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 d-flex justify-content-center">
+      <div class="d-flex flex-column mx-5">
+        <lord-icon
+          src="https://cdn.lordicon.com/dnoiydox.json"
+          trigger="loop-on-hover"
+          colors="primary:#000000,secondary:#911710"
+          style="width:100px;height:100px">
+        </lord-icon>
+        <button type="button" class="btn btn-success titulos fs-5 box-radius letter-sep">{{__("COMPRAR")}}</button>
+      </div>
+      <div class="d-flex flex-column mx-5">
+        <lord-icon
+          src="https://cdn.lordicon.com/hrqwmuhr.json"
+          trigger="loop-on-hover"
+          colors="primary:#000000,secondary:#911710"
+          style="width:100px;height:100px">
+        </lord-icon>
+        <a type="button" href="{{route('welcome')}}" class="btn btn-danger titulos fs-5 box-radius letter-sep">{{__("VOLVER")}}</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
 
 
 

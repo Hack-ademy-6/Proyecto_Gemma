@@ -34,7 +34,7 @@
                         <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                     </h6>
                     <div class="d-flex flex-column">
-                        <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-danger txt-cuerpo box-radius my-2">LEER</a>
+                        <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-danger txt-cuerpo box-radius my-2">{{__("LEER")}}</a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 {
     "Anuncio": "Annuncio",
+    "Buscar": "Cerca",
 
     "Motos": "Motociclette",
     "Coches": "Auto",
@@ -18,11 +19,28 @@
     "¿Quieres ganar dinero fácilmente? ¡Añade tu propio anuncio!": "Vuoi guadagnare soldi facilmente? Aggiungi il tuo annuncio!",
     "Pincha aquí o en": "Clicca qui o al",
     "Más": "Più",
+    "¡SEGURIDAD!": "SICUREZZA!",
+    "Nos importa que os sintáis seguros y así conseguir vuestra confianza, porque vosotros sois lo que importa.": "Ci interessa che vi sentiate al sicuro e quindi guadagniamo la vostra fiducia, perché siete voi ciò che conta",
+    "¡COMUNICACIÓN!": "COMUNICAZIONE!",
+    "Si tienes alguna duda, NOSOTRO TE LA RESOLVEREMOS, contáctanos cuando sea necesario, siempre estamos preparados.": "Se hai dei dubbi, NOI LI RISOLVEREMO, contattaci quando necessario, siamo sempre pronti",
+    "¡NOSOTROS VAMOS!": "ANDIAMO!",
+    "Siempre que compres algún producto, te aseguramos que haremos para que llegue a tu domicilio a la velocidad de un rayo.":  "Ogni volta che compri qualsiasi prodotto, ti assicuriamo che faremo in modo che arrivi al tuo indirizzo alla velocità della luce",
+    "¡Ha llegado el momento!": "È arrivato il momento!" ,
+    "Busca los productos que deseas en las categorías, quién sabe... quizás encuentres lo que buscas...": "Cercate i prodotti che volete nelle categorie, chissà... forse troverete quello che cercate...",
+    "Si lo que quieres es vender, NADIE TE LO IMPIDE, sube un anuncio en":  "Se quello che vuoi è vendere, nessuno ti ostacola, carica un annuncio",
+    "¡Los productos más recientes!":  "Gli ultimi prodotti!",
 
     "Anuncios por categoría:": "Annunci per categoria:",
+    "LEER": "LEGGI",
 
     "Detalles del producto": "Dettagli del prodotto",
-    "Comprar": "Comprare",
+    "INFORMACIÓN DEL VENDEDOR": "INFORMAZIONI SUL VENDITORE",
+    "NOMBRE": "NOME",
+    "EMAIL": "EMAIL",
+    "COMPRAR": "COMPRARE",
+    "VOLVER": "RITORNO",
+
+    "Resultados de la búsqueda": "Risultati della ricerca",
 
     
     "RECIBE LAS NOVEDADES": "OTTENERE LE ULTIME NOTIZIE",
@@ -32,5 +50,25 @@
     "Precios": "Prezzi",
     "Preguntas": "Domande",
     "¿Quiénes somos?": "Chi siamo?",
-    "Contáctanos": "Contattateci"
+    "Contáctanos": "Contattateci",
+    "CERRAR": "CHIUDERE",
+    "TELÉFONO": "TELEFONO",
+
+    "Usuario": "Utente",
+    "Título": "Titolo",
+    "Descripción": "Descrizione",
+    "Imagen": "Immagine",
+    "Adulto": "Adulti ",
+    "Falsificación": "Falsificazione",
+    "Médico": "Medico",
+    "Violencia": "Violenza",
+    "Racismo": "Razzismo",
+    "Etiquetas": "Etichette",
+    "RECHAZAR": "RIFIUTO",
+    "ACEPTAR": "ACCETTA",
+    "¡Qué RÁPIDO! No hay más anuncios": "Che velocità! Niente più annunci",
+
+    "Crear": "Creare",
+    "Imágenes": "Immagini",
+    "Nuevo": "Nuevo"
 }
