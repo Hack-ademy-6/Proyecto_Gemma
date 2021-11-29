@@ -14,7 +14,7 @@
     <div class="row">
         @foreach ($ads as $ad)
         <div class="col-12 col-md-4 py-2 d-flex justify-content-center">
-            <div class="card h-100" style="width: 30rem;"">
+            <div class="card bg-dark border-0 shadow text-white h-100" style="width: 30rem;"">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($ad->images as $image)
@@ -34,7 +34,7 @@
                         <i>{{$ad->created_at->format('d/m/Y')}} - {{$ad->user->name}}</i>
                     </h6>
                     <div class="d-flex flex-column">
-                        <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-dark txt-cuerpo box-radius my-2">LEER</a>
+                        <a href="{{route('ad.details', $ad->slug)}}" class="btn btn-danger txt-cuerpo box-radius my-2">LEER</a>
                     </div>
                 </div>
             </div>

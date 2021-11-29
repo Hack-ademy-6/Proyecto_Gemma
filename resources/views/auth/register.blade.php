@@ -4,7 +4,7 @@
 <div class="container my-3 py-3">
     <div class="row">
         <div class="col-12 text-center">
-            <h2>Registrate</h2>
+            <h2 class="titulos display-4">Regístrate</h2>
         </div>
 
         @if ($errors->any())
@@ -50,11 +50,12 @@
                         Debe contener entre 8-20 carácteres.
                       </span>
                   </div>
-
-                <button type="submit" class="btn btn-dark box-radius">Registrarse</button>
+                  <div class="d-flex justify-content-center ">
+                    <button type="submit" class="btn btn-dark box-radius titulos letter-sep">REGISTRARSE</button>
+                  </div>
               </form>
-              <div class="form-lin d-flex flex-column my-5 text-center">
-                <p>¿Ya tienes una cuenta?</p>
+              <div class="form-lin d-flex flex-column my-5 text-center txt-cuerpo">
+                <h5>¿Ya tienes una cuenta?</h5>
                 <a type="submit" class="text-decoration-none" href="{{route('login')}}">Iniciar sesión</a>
               </div>
 

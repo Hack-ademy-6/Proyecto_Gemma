@@ -26,6 +26,7 @@ Route::post('/ad/images/upload', [HomeController::class, 'uploadImages'])-> name
 Route::delete('/ad/images/remove', [HomeController::class, 'removeImages'])-> name('ad.images.remove');
 Route::get('/ad/images', [HomeController::class, 'getImages'])-> name('ad.images');
 Route::get('/revisor', [RevisorController::class, 'index'])-> name('revisor.home');
+Route::get('/search', [PublicController::class, 'search'])-> name('search');
 Route::get('/{ad}', [PublicController::class, 'details'])-> name('ad.details');
 
 

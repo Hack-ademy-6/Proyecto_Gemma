@@ -31,6 +31,7 @@
     
     <script src="{{mix('js/app.js')}}"></script>
     <script src="https://kit.fontawesome.com/9dd4195462.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
    
   </body>
 </html>

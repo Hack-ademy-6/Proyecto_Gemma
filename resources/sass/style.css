@@ -9,6 +9,15 @@
     color: transparent;
 }
 
+
+
+.borde1{
+  border-bottom: 2px solid #dc3545;
+}
+.borde2{
+  border-top: 2px solid #dc3545;
+}
+
 .btn-cambio{
     color: black;
     border-color: transparent;
@@ -152,12 +161,3 @@
     
   }
 
-@media (min-width: 576px){
-
-  .search-box{
-    min-width: 50px;
-  }
-  
-}
-
-  
