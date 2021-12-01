@@ -1,5 +1,6 @@
 <?php
 
+use App\Providers\NovaServiceProvider;
 use Laravel\Scout\ScoutServiceProvider;
 use TeamTNT\Scout\TNTSearchScoutServiceProvider;
 
@@ -176,6 +177,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\NovaServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         
         TeamTNT\Scout\TNTSearchScoutServiceProvider::class,

@@ -22,9 +22,9 @@
                 </a>
                 @endif
                 @endauth 
-                <a class="fs-6 mx-3 text-decoration-none links badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> {{__("Anuncio")}}</a>
+                <a class="fs-6 mx-3 text-decoration-none links2 badge box-radius bg-success" href="{{route('ad.new')}}"><i class="fas fa-plus"></i> {{__("Anuncio")}}</a>
                 @guest
-                <a type="button" class="mx-1 links fs-2" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
+                <a type="button" class="mx-1 links fs-2 links" href="{{route('login')}}"><i class="fas fa-user-circle"></i></a>
                 @endguest
                 @auth 
                 <form action="{{route('logout')}}" method="POST">
@@ -34,9 +34,9 @@
                 @endauth
                 <ul class="navbar-nav">
                     <li class="nav-item mx-2 dropdown">
-                        <a class="nav-link text-white fs-2 text-uppercase fw-bold" href="#" id="dropdown04"
+                        <a class="nav-link text-white  fs-2 text-uppercase fw-bold" href="#" id="dropdown04"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-globe-americas"></i>
+                            <i class="fas fa-globe-americas links"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark menu " aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item icon-band"

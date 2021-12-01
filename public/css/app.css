@@ -4,7 +4,14 @@
     color: white;
 }
 .links:hover{
-    color: rgb(194, 194, 194);
+    color: #dc3545;
+}
+
+.links2{
+  color: white;
+}
+.links2:hover{
+  color: rgb(199, 199, 199);
 }
 
 .a2{

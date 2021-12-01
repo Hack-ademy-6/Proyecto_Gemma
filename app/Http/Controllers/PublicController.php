@@ -16,6 +16,11 @@ class PublicController extends Controller
         return view ('welcome', compact('ads'));
     }
 
+    public function categorias(){
+       
+        return view ('categorías');
+    }
+
     public function search(Request $request){
         $q = $request->input('q');
         $ads = Ad::search($q)

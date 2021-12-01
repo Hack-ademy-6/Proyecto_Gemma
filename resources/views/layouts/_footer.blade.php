@@ -13,7 +13,7 @@
       <div class="col-12 col-md-3 d-flex flex-column align-items-center">
         <ul class="nav col flex-column align-items-center text-center pt-3">
             <li class="nav-item mb-2 "><a href="{{route('welcome')}}" class="nav-link p-0 text-muted txt-cuerpo">{{__("Inicio")}}</a></li>
-            <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("Categorías")}}</a></li>
+            <li class="nav-item mb-2 "><a href="{{route('categorías')}}" class="nav-link p-0 text-muted txt-cuerpo">{{__("Categorías")}}</a></li>
             <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted txt-cuerpo">{{__("Precios")}}</a></li>
         </ul>
       </div>
